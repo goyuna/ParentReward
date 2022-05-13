@@ -47,6 +47,14 @@ public class ParentRewardActivity extends AppCompatActivity {
                 String name = mArrayList.get(position).getName();
                 Toast.makeText(mContext, "이름 : " + name, Toast.LENGTH_SHORT).show();
             }
+
+            //삭제
+            @Override
+            public void onDeleteClick(View v, int position) {
+                mArrayList.remove(position);
+                mRewardAdapter.notifyItemRemoved(position);
+            }
+
         });
 
         //버튼 클릭이벤트

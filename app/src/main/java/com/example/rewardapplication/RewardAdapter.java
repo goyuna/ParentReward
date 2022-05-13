@@ -26,6 +26,7 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.ViewHolder
     //아이템 클릭 리스너 인터페이스
     interface OnItemClickListener{
         void onItemClick(View v, int position); //뷰와 포지션값
+        void onDeleteClick(View v, int positon);//삭제
     }
     //리스너 객체 참조 변수
     private OnItemClickListener mListener = null;
@@ -63,10 +64,12 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.ViewHolder
     //뷰홀더 객체에 저장되어 화면에 표시되고, 필요에 따라 생성 또는 재활용 된다.
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView reward_name;
+        ImageButton btn_delete;
 
         public ViewHolder(@NonNull View itemView) {
             super (itemView);
             this.reward_name = itemView.findViewById (R.id.reward_name);
+            this.btn_delete = itemView.findViewById(R.id.btn_delete);
 
             itemView.setOnClickListener (new View.OnClickListener () {
                 @Override
@@ -75,6 +78,18 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.ViewHolder
                     if (position!=RecyclerView.NO_POSITION){
                         if (mListener!=null){
                             mListener.onItemClick (view,position);
+                        }
+                    }
+                }
+            });
+
+            btn_delete.setOnClickListener (new View.OnClickListener () {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition ();
+                    if (position!=RecyclerView.NO_POSITION){
+                        if (mListener!=null){
+                            mListener.onDeleteClick(view,position);
                         }
                     }
                 }
