@@ -45,7 +45,7 @@ public class ParentRewardActivity extends AppCompatActivity {
             @Override
             public void onItemClick (View v,int position){
                 String name = mArrayList.get(position).getName();
-                Toast.makeText(mContext, "이름 : " + name, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "집안일 : " + name, Toast.LENGTH_SHORT).show();
             }
 
             //삭제

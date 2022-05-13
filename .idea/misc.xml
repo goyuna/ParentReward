@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/round_box.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-xxhdpi/btn_reward.xml" value="0.106" />
+        <entry key="app/src/main/res/drawable-xxhdpi/reward.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.1" />
